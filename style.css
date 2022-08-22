@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+:root {
+  --body-bg: #0a0c1c;
+  --dark-bg: #1b1937;
+  --span-purple: #ab5cdb;
+  --main-p: hsla(0, 0%, 100%, 0.75);
+  --main-p-stat: hsla(0, 0%, 100%, 0.6);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: var(--body-bg);
+  color: #fff;
+}
+
+h1,
+h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+}
+
+p {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: var(--main-p);
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+  line-height: 0;
+}
+
+.container {
+  max-width: 1100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  border-radius: 8px;
+  background: var(--dark-bg);
+  overflow: hidden;
+  margin: 2rem;
+  padding-left: 5rem;
+}
+
+.card .card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 2rem;
+}
+
+.card .card-content h1 {
+  font-size: 3.6rem;
+  font-weight: 700;
+  line-height: 4.4rem;
+}
+
+.card .card-content h1 span {
+  color: var(--span-purple);
+}
+
+.card .card-content > p {
+  font-size: 1.5rem;
+  padding-right: 2.5rem;
+  margin: 2.5rem 0;
+  line-height: 2.5rem;
+}
+
+.card .card-content .card-stats {
+  display: flex;
+  gap: 6rem;
+}
+
+.card .card-content .card-stats .stat h2 {
+  font-size: 2.4rem;
+  line-height: 4rem;
+}
+
+.card .card-content .card-stats .stat p {
+  font-family: "Lexend Deca";
+  color: var(--main-p-stat);
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+}
+
+.card .image {
+  background: #ab5cdb;
+}
+
+.card .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mix-blend-mode: multiply;
+  opacity: 0.8;
+}
+
+@media (max-width: 800px) {
+  html {
+    font-size: 50%;
+  }
+  .card .card-content {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 0;
+  }
+
+  .card .card-content {
+    padding: 3rem 5rem;
+  }
+  .card .card-content h1 {
+    font-size: 28px;
+  }
+
+  .card .card-content > p {
+    padding: 0;
+    font-size: 15px;
+    font-weight: 400;
+  }
+  .card .card-content .card-stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .card .card-content .card-stats .stat h2 {
+    margin-top: 1rem;
+    font-size: 20px;
+  }
+  .card .card-content .card-stats .stat p {
+    letter-spacing: 2px;
+    font-size: 12px;
+  }
+}
